@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.setItem("currentUser", JSON.stringify(users[userIndex]));
 
             alert("Your Display name has been saved");
-            window.location.href = "PP.html";
+            window.location.href = "index.html";
         }
     });
 });
