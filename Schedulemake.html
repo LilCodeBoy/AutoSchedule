@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=2.0">
+  <title>IB Scheduler</title>
+  <link rel="stylesheet" href="Schedulemaker.css">
+  <script src="Schedulemaker.js"></script>
+</head>
+<body>
+
+    <h1><button>Begin creating your Study Schedule</button></h1>
+    
+    <h2>School Start and End </h2>
+    
+<form id="scheduleform" class="scheduleforms">
+        <label class = "schoolstarts"> What time deos school start? (commute and get ready time included): 
+            <input type="time" id="schoolstart" required>
+        </label>
+        
+        <label class = "schoolends"> What time do you get home? (use a 24 hour format eg: 17:00 for 5pm):
+            <input type="time" id="schoolend" required>
+        </label>
+
+    <h2>What times do you want to start and stop working</h2>
+    <label class = "start work">Start (Use a 24 hour format eg: 17:00 for 5pm):
+            <input type="time" id="workstart" required>
+            
+    </label>
+
+    <label class = "end work"> End (Use a 24 hour format eg: 17:00 for 5pm):
+        <input type = "time" id="workend" required>
+    </label>
+
+    <h2>Assigments</h2>   
+    <label class ="assigmentnum">How many assigments do you have?
+        <select id="assignmentnumber">
+        <option value ="0">0</option>
+        <option value ="1">1</option>
+        <option value ="2">2</option>
+        <option value ="3">3</option>
+        <option value ="4">4</option>
+        <option value ="5">5</option>
+        <option value ="6">6</option>
+        <option value ="7">7</option>
+        </select>
+    </label>
+
+    <div id="due" hidden>
+        <label class = "assigmentdue">
+            When is your Assigment due?
+            <input type ="date">
+        </label>
+    </div>
+
+    <script>
+        const assigmentQuantity = document.getElementById("assignmentnumber");
+        const due = document.getElementById("due");
+
+        assigmentQuantity.addEventListener ("change", () => {
+            const count = Number(assigmentQuantity.value);
+
+            
+        
+            if (count > 0) {
+            due.hidden = false;
+
+            due.innerHTML = ""
+
+            due.innerHTML += `<p>When are your assigments due?</p>`;
+            
+            for (let x = 1; x <= count; x++) {
+                due.innerHTML += `
+                    <div>
+                        <label>
+                            Assignment #${x} Due Date:
+                            <input type ="date">
+                        </label>
+
+                        <label>
+                            Time needed (hours):
+                            <input 
+                                type = "number" 
+                                class="assigment-hours"
+                                min="0"
+                                step="0.25"
+                    </div>
+                `;
+            }
+        } else {
+            due.hidden = true;
+        }
+        });
+    </script>
+    
+    <div id ="assigments"></div>
+
+    <h2>Study for Classes</h2>
+    <label class = "studyclass">Do you want to study for classes?
+        <select id="classstudy">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+        </select>
+    </label>
+         
+    <div id="study" hidden>
+        <label class = "timestudy"> 
+            How long do you want to study every day? (hours)
+            <input type="number" id="studyhours" step="0.1" min= "0">
+        </label>     
+    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        
+        const classestostudy= document.getElementById("classstudy");
+        const studytime = document.getElementById("study");
+        
+        classestostudy.addEventListener ("change", () => {
+            if (classestostudy.value === "yes") {
+                studytime.hidden = false;
+            } else {
+                studytime.hidden = true;
+            }
+        });
+    });    
+    </script>
+</form>
+
+<button type = "submit" id="submitSchedule">Submit</button>
+</body>
+
+</html>
+
+
+   
+    
+

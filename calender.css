@@ -1,0 +1,79 @@
+#calendar-container {
+    width: 95%;
+    max-width: 1100px;
+    margin: 20px auto;
+}
+
+.month-wrapper {
+    margin-bottom: 40px;
+}
+
+.month-wrapper h3 {
+    text-align: center;
+    margin: 0 0 12px;
+    font-size: 20px;
+    color: rgb(16, 16, 63);
+}
+
+.month-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 3px;
+    background: white;
+    border: 1px solid grey;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.calendar-header-cell {
+    background: rgb(31, 34, 82);
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 8px;
+    text-align: center;
+}
+
+
+
+.calendar-box{
+    background: white;
+    min-height: 60px;
+    border: 1px solid grey;
+    padding: 6px;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 11px;
+}
+
+.day-number {
+    font-weight: bold;
+    font-size: 15px;
+    color: darkblue;
+}
+
+.task-item {
+    font-size: 10px;
+    line-height: 1;
+    padding: 2px 4px;
+    border-radius: 3px;
+    margin-bottom: 1px;
+    border-left: 4px solid grey;
+    background: white;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.task-name {
+    font-weight: 500;
+}
+
+.task-time {
+    color: darkgray;
+    font-size: 12px;
+}
+
+.task-item.school { border-left-color: red; background: white;}
+.task-item.study { border-left-color: blue; background: white;}
+.task-item.assignment { border-left-color: orange; background: white;}
+
