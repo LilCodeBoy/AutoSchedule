@@ -16,7 +16,7 @@ loginBtn.addEventListener("click", () => {
   });
 
   startBtn.addEventListener ("click", () => {
-    window.location.href = "Schedulemaker.html";
+    window.location.href = "Schedulemake.html";
   });
 
 
