@@ -24,23 +24,6 @@ body {
     border-bottom-right-radius: 15px;
   }
 
-  .About-author-btn {
-    position: absolute;
-    top: 25px;
-    right: 40px;
-    font-size: 20px;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-    border: none;
-    transition: 0.3s;
-    font-weight: 700;
-  
-  }
-
-  .About-author-btn:hover {
-    scale: 1.1;
-  }
   
   .Login-btn {
     position: absolute;
@@ -109,6 +92,18 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
     scale: 1.1;
+  }
+  
+
+  .About-author-bar {
+    margin-top: 120px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 50px 70px;
+    max-width: 900px;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
   }
   
   .Top {
