@@ -1,77 +1,152 @@
-.poppins-thin {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-
 body {
+    margin: 0;
     font-family: "Poppins", sans-serif;
     background: linear-gradient(135deg, #2E3192, #1BFFFF);
-    max-height: 60%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: black;
-    padding: 15px;
+    color: #000;
+  }
+  
 
-}
-.scheduleforms {
-    background-color: white;
-    padding: 50px 50px;
-    width: 80%;
-    border-radius: 40px;
-    border-color: black;
-    border-width: 10px;
-}
-
-h1{
-    font-size: 30px;
-    font-weight: 600;
-    color: black;
+  .Top-bar {
+    width: 100%;
+    background-color: rgba(22, 28, 94, 0.95);
+    color: white;
     text-align: center;
-    width: 75%;
+    padding: 1.2rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
 
-}
-
-h2{
-    top: 50px;
+  
+  .Login-btn {
+    position: absolute;
+    top: 25px;
+    left: 40px;
     font-size: 20px;
-    font-weight: 600;
-    color: black;
-    text-align: center;
-    font-family: "Poppins";
-}
-
-label {
-    display: flex;
-    flex-direction: column;
-    font-weight: 400;
-    color: black;
-}
-
-
-#due {
-    font-weight: 400;
-    color: black;
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    font-family: "Poppins";
-    font-weight: 600;
-}
-
-button {
-    padding: 15px 30px;
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-    background-color: white;
-    border-radius: 15px;
+    background-color: transparent;
+    color: white;
     cursor: pointer;
-    align-self: center;
-    margin-top: 15px;
-    width: 50%;
-}
+    border: none;
+    transition: 0.3s;
+    font-weight: 700;
+  }
+
+  .Login-btn:hover {
+    scale: 1.1;
+  }
+
+  .Sign-up-btn {
+    position: absolute;
+    top: 25px;
+    left: 150px;
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+    font-weight: 700;
+  }
+
+  .Sign-up-btn:hover {
+    scale: 1.1;
+  }
+  
+  .nav-middle {
+    margin: 0;
+  }
+  
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+  }
+  
+
+  .start-btn {
+    padding: 18px 60px;
+    background-color: #e3e55b;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+    margin-top: 20px;
+  }
+
+  
+  .start-btn:hover {
+    background-color: #d3d64b;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+    scale: 1.1;
+  }
+  
+
+  .About-author-bar {
+    margin-top: 120px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 50px 70px;
+    max-width: 900px;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .Top {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #10174a;
+    margin-bottom: 20px;
+  }
+  
+  .Text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #000;
+  }
+
+  .displayname-btn {
+    position: absolute;
+    top: 25px;
+    left: 75px;
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+    font-weight: 700;
+    opacity: 0;
+  }
+
+  .displayname-btn:hover {
+    cursor: pointer;
+  }
+
+  .nav-left {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+    font-weight: 700;
+  }
 
